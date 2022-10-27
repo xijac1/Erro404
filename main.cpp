@@ -11,5 +11,5 @@ int main()
     cout << "Hello please enter your name: ";
     getline(cin, name);
     
-    cout << name << " how may i help you?" << endl;
+    cout << name << ", how may I help you?" << endl;
 }
