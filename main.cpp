@@ -12,5 +12,6 @@ int main()
     getline(cin, name);
     
     cout << "hello, " << name << '.'<< endl;
+    cout << 'h';
     
 }
