@@ -35,6 +35,7 @@ int main()
 
 }
 
+// this function checks for input validation.
 int inputvalidation()
 {
     string user_string_num = "";
@@ -89,7 +90,7 @@ int inputvalidation()
 
             is_num_bool = 1;
 
-            void main_program();
+            main_program();
         
         }
         else
