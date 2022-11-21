@@ -65,7 +65,8 @@ return 0;
 void asia()
 {
     cout << "African Dishes\n"
-        << "select for recipe\n";
+        << setw(15) << setfill('-') << " " << endl
+        << "Select For Recipe:\n";
     cout << "1 - West African Ribs\n"
          << ">>> ";
     cin >> choice;
