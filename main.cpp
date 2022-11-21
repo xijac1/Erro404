@@ -4,19 +4,38 @@
 #include <string>
 #include <ctype.h> //isdigit
 #include <sstream> //stringstream
-
-void inputvalidation();
-
+#include <iomanip>
 
 using namespace std;
 
+void main_program();
+
+int choice;
+int inputvalidation();
+
+string user_string_num0 = "";
 int main()
 {
-    inputvalidation();
+    cout << right << setw(14) << setfill(' ') << endl << endl << "FoodX\n";
+ 
+    cout << right << setw(24) << setfill('*') << " " << endl;
+
+    cout << "* SELECT A REGION     *\n";
+    cout << "* [1] - Asia          *\n"
+         << "* [2] - North America *\n"
+         << "* [3] - Africa        *\n"
+         << "* [4] - Europe        *\n"
+         << "* [5] - Latin America *\n";
+    cout << right << setw(24) << setfill('*') << " " << endl;
+    cout << ">>> ";
+
+    choice = inputvalidation();
+
+
 
 }
 
-void inputvalidation()
+int inputvalidation()
 {
     string user_string_num = "";
 
@@ -29,9 +48,9 @@ void inputvalidation()
 
     do
     {
-        cout << "Enter a number: ";
-        // cin >> user_string_num;
+        cout << "Enter a choice: ";
         getline(cin, user_string_num);
+
 
         for (int i = 0; i < user_string_num.size(); i++)
         {
@@ -70,12 +89,7 @@ void inputvalidation()
 
             is_num_bool = 1;
 
-            cout << endl
-                 << user_string_num << "(user_string_num) "
-                 << "is a number!" << endl
-                 << user_converted_num << "(user_converted_num) "
-                 << "is a number!" << endl
-                 << endl;
+            void main_program();
         
         }
         else
@@ -96,5 +110,12 @@ void inputvalidation()
 
     } while (is_num_bool == 0);
 
+    return user_converted_num;
 
+
+}
+
+void main_program()
+{
+      cout << "great job!\n";
 }
