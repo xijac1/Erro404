@@ -5,7 +5,7 @@
 #include <ctype.h> //isdigit
 #include <sstream> //stringstream
 #include <iomanip>
-
+#include <fstream>
 using namespace std;
 
 void main_program();
@@ -13,27 +13,100 @@ void main_program();
 int choice;
 int inputvalidation();
 
+// functions
+void asia();
+//variables
+ifstream infile1;
+
+//asia
+string asian_dish1;
+
+
 string user_string_num0 = "";
 int main()
 {
     cout << right << setw(14) << setfill(' ') << endl << endl << "FoodX\n";
  
-    cout << right << setw(24) << setfill('*') << " " << endl;
+    cout << right << setw(24) << setfill('-') << " " << endl;
 
-    cout << "* SELECT A REGION     *\n";
-    cout << "* [1] - Asia          *\n"
-         << "* [2] - North America *\n"
-         << "* [3] - Africa        *\n"
-         << "* [4] - Europe        *\n"
-         << "* [5] - Latin America *\n";
-    cout << right << setw(24) << setfill('*') << " " << endl;
+    cout << "| SELECT A REGION     |\n";
+    cout << "| [1] - Africa        |\n"
+         << "| [2] - North America |\n"
+         << "| [3] - Asia          |\n"
+         << "| [4] - Europe        |\n"
+         << "| [5] - Latin America |\n";
+    cout << right << setw(24) << setfill('-') << " " << endl;
     cout << ">>> ";
 
     choice = inputvalidation();
 
+    switch (choice)
+    {
+        case 1:
+        {
+            asia();
+        }
+        break;
 
+        default:
+        {
+            cout << "nothing\n";
+        }
+    }
+
+return 0;
 
 }
+
+
+
+
+
+void asia()
+{
+    cout << "African Dishes\n"
+        << "select for recipe\n";
+    cout << "1 - West African Ribs\n"
+         << ">>> ";
+    cin >> choice;
+
+    switch(choice)
+    {
+    case 1:
+    {
+        int count = 0;
+        infile1.open("West_African_Ribs.txt"); // or fstream file to read
+
+        //check for error
+        if(infile1.fail())
+        {
+            cerr << "Error openning file" << endl;
+            exit(1);
+        }
+
+        while(!infile1.eof())
+        {
+            getline(infile1, asian_dish1);
+            cout << asian_dish1 << endl;
+            count ++;
+        }
+
+        cout << endl << count << " items found" << endl << endl;
+    }
+        break;
+
+    default:
+    {
+        cout << "working\n";
+    }
+
+    }
+}
+
+
+
+
+
 
 // this function checks for input validation.
 int inputvalidation()
@@ -117,5 +190,5 @@ int inputvalidation()
 
 void main_program()
 {
-      cout << "great job!\n";
+     // cout << "great job!\n";
 }
