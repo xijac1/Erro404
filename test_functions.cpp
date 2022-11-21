@@ -6,9 +6,11 @@ using namespace std;
 
 int validation(string user_string_num);
 
+// variable declaration
+string user_string;
+
 int main()
 {
-    string user_string;
 
     
     validation(user_string);
