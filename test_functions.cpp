@@ -1,57 +1,37 @@
-// we will create our project here
 
 #include <iostream>
-#include <string>
-#include <ctype.h> //isdigit
-#include <sstream> //stringstream
-#include <iomanip>
-
+#include <ctype.h> // isdigit()
+#include <sstream> // stringstream
 using namespace std;
 
-void main_program();
+int validation(string user_string_num);
 
-int choice;
-int inputvalidation();
-
-string user_string_num0 = "";
 int main()
 {
-    cout << right << setw(14) << setfill(' ') << endl << endl << "FoodX\n";
- 
-    cout << right << setw(24) << setfill('*') << " " << endl;
+    string user_string;
 
-    cout << "* SELECT A REGION     *\n";
-    cout << "* [1] - Asia          *\n"
-         << "* [2] - North America *\n"
-         << "* [3] - Africa        *\n"
-         << "* [4] - Europe        *\n"
-         << "* [5] - Latin America *\n";
-    cout << right << setw(24) << setfill('*') << " " << endl;
-    cout << ">>> ";
-
-    choice = inputvalidation();
-
-
-
+    
+    validation(user_string);
 }
 
-// this function checks for input validation.
-int inputvalidation()
+
+
+int validation(string user_string_num)
 {
-    string user_string_num = "";
+
 
     int is_num = 0,
         decimal_count = 0,
         user_converted_num;
 
     bool is_num_bool = 0,
-         contains_spaces = false;
+        contains_spaces = false;
 
     do
     {
-        cout << "Enter a choice: ";
+        cout << "Enter a number: ";
+        // cin >> user_string_num;
         getline(cin, user_string_num);
-
 
         for (int i = 0; i < user_string_num.size(); i++)
         {
@@ -90,16 +70,22 @@ int inputvalidation()
 
             is_num_bool = 1;
 
-            main_program();
+            cout << endl
+                << user_string_num << "(user_string_num) "
+                << "is a number!" << endl
+                << user_converted_num << "(user_converted_num) "
+                << "is a number!" << endl
+                << endl;
+        
         }
         else
         {
             cout << endl
-                 << "Number must NOT contain spaces.\n"
-                 << "Number must NOT contain letters.\n"
-                 << "Number must NOT contain symbols.\n"
-                 << "Number must NOT be a decimal number.\n"
-                 << endl;
+                << "Number must NOT contain spaces.\n"
+                << "Number must NOT contain letters.\n"
+                << "Number must NOT contain symbols.\n"
+                << "Number must NOT be a decimal number.\n"
+                << endl;
 
             is_num_bool = 0;
             is_num = 0;
@@ -111,11 +97,4 @@ int inputvalidation()
     } while (is_num_bool == 0);
 
     return user_converted_num;
-
-
-}
-
-void main_program()
-{
-      cout << "great job!\n";
 }
