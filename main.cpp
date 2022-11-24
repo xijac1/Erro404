@@ -72,7 +72,7 @@ void asia()
          << ">>> ";
     choice2 = inputvalidation();
 
-    switch(choice)
+    switch(choice2)
     {
     case 1:
     {
