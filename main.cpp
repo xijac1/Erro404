@@ -10,7 +10,8 @@ using namespace std;
 
 void main_program();
 
-int choice;
+int choice, // used in the menue function
+    choice2; // used in asia function
 int inputvalidation();
 
 // functions
@@ -69,7 +70,7 @@ void asia()
         << "Select For Recipe:\n";
     cout << "1 - West African Ribs\n"
          << ">>> ";
-    cin >> choice;
+    choice2 = inputvalidation();
 
     switch(choice)
     {
