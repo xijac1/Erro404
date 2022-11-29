@@ -15,7 +15,7 @@ int choice, // used in the menue function
 int inputvalidation();
 
 // functions
-void asia();
+void africa();
 //variables
 ifstream infile1;
 
@@ -45,7 +45,7 @@ int main()
     {
         case 1:
         {
-            asia();
+            africa();
         }
         break;
 
@@ -63,7 +63,7 @@ return 0;
 
 
 
-void asia()
+void africa()
 {
     cout << "African Dishes\n"
         << setw(15) << setfill('-') << " " << endl
