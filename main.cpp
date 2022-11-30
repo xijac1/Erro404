@@ -17,29 +17,21 @@ void north_america();
 void south_america();
 void europe();
 
+void main_menu();
+
 //global variables
 int choice, // used in the menue function
 choice2; // used in asia function
 string adish;
 // used to read files
 ifstream infile1; 
-// used to read user input
-string user_string_num0 = "";
+// used to read user input... extra
+//string user_string_num0 = "";
 
 int main()
 {
-    cout << right << setw(14) << setfill(' ') << endl << endl << "FoodX\n";
-
-    cout << right << setw(24) << setfill('-') << " " << endl;
-
-    cout << "| SELECT A REGION     |\n";
-    cout << "| [1] - Africa        |\n"
-        << "| [2] - North America |\n"
-        << "| [3] - Asia          |\n"
-        << "| [4] - Europe        |\n"
-        << "| [5] - Latin America |\n";
-    cout << right << setw(24) << setfill('-') << " " << endl;
-    cout << ">>> ";
+    // will show menu to user
+    main_menu();
 
     // input validation
     do
@@ -183,7 +175,22 @@ void north_america()
 }
 
 
+// main menu of the program
+void main_menu()
+{
+    cout << right << setw(14) << setfill(' ') << endl << endl << "FoodX\n";
 
+    cout << right << setw(24) << setfill('-') << " " << endl;
+
+    cout << "| SELECT A REGION     |\n";
+    cout << "| [1] - Africa        |\n"
+        << "| [2] - North America |\n"
+        << "| [3] - Asia          |\n"
+        << "| [4] - Europe        |\n"
+        << "| [5] - Latin America |\n";
+    cout << right << setw(24) << setfill('-') << " " << endl;
+    cout << ">>> ";
+}
 
 // this function checks for input validation.
 int inputvalidation()
@@ -209,7 +216,7 @@ int inputvalidation()
                 contains_spaces = true;
         }
 
-        if (user_string_num[0] == '-') // jesus -8
+        if (user_string_num[0] == '-') // -8
         {
             is_num++;
 
