@@ -86,9 +86,13 @@ void africa()
 {
     cout << "African Dishes\n"
         << setw(15) << setfill('-') << " " << endl
-        << "Select For Recipe:\n";
+        << "Select For Recipe:\n"
+        <<"\n==PORK===\n";
     cout << "1 - West African Ribs\n"
-        <<"2 - Nigerian Beef Stew\n"
+        <<"2 - Pork & Peanut Stew\n"
+        <<"3 - Tenderloins\n"
+        <<"4 - Spicy North African Kebabs\n"
+        <<"5 - Haitian Pork Griot\n"
         << ">>> ";
     choice2 = inputvalidation();
 
@@ -187,7 +191,7 @@ void main_menu()
         << "| [2] - North America |\n"
         << "| [3] - Asia          |\n"
         << "| [4] - Europe        |\n"
-        << "| [5] - Latin America |\n";
+        << "| [5] - South America |\n";
     cout << right << setw(24) << setfill('-') << " " << endl;
     cout << ">>> ";
 }
